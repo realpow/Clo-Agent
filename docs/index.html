@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>주식 조건검색 결과</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR', sans-serif;
+         background: #f5f5f5; color: #222; line-height: 1.6; }
+  .header { background: #0f1923; color: white; padding: 28px 24px; }
+  .header h1 { font-size: 22px; font-weight: 600; margin-bottom: 4px; }
+  .header .meta { font-size: 13px; color: #aaa; }
+  .summary { display: flex; gap: 12px; padding: 16px 24px;
+              background: white; border-bottom: 1px solid #eee; flex-wrap: wrap; }
+  .summary-card { background: #f8f9fa; border-radius: 8px; padding: 12px 20px; text-align: center; }
+  .summary-card .num { font-size: 24px; font-weight: 700; color: #185FA5; }
+  .summary-card .lbl { font-size: 12px; color: #888; margin-top: 2px; }
+  .container { max-width: 960px; margin: 20px auto; padding: 0 16px; }
+  .section { background: white; border-radius: 12px; margin-bottom: 16px;
+              border: 1px solid #e8e8e8; overflow: hidden; }
+  .section-header { padding: 16px 20px; border-bottom: 1px solid #f0f0f0; }
+  .section-header > div { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .section-title { font-size: 16px; font-weight: 600; }
+  .section-desc { font-size: 12px; color: #888; }
+  .badge { font-size: 12px; padding: 2px 10px; border-radius: 999px; font-weight: 500; }
+  table { width: 100%; border-collapse: collapse; }
+  th { padding: 10px 16px; font-size: 12px; color: #888; font-weight: 500;
+        border-bottom: 1px solid #f0f0f0; text-align: left; background: #fafafa; }
+  td { padding: 12px 16px; font-size: 14px; border-bottom: 1px solid #f8f8f8; vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #fafcff; }
+  .code { font-size: 12px; color: #aaa; }
+  .footer { text-align: center; padding: 24px; font-size: 12px; color: #aaa; }
+  @media(max-width:600px) { th:nth-child(4), td:nth-child(4) { display:none; } }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>📊 주식 조건검색 결과</h1>
+  <div class="meta">2026년 06월 17일 07:42 기준 &nbsp;·&nbsp; 시가총액 2,000억 이상 대상</div>
+</div>
+<div class="summary">
+  <div class="summary-card">
+    <div class="num">0</div>
+    <div class="lbl">총 발견 건수</div>
+  </div>
+  <div class="summary-card"><div class="num" style="color:#185FA5">0</div><div class="lbl">엔벨로프</div></div><div class="summary-card"><div class="num" style="color:#0F6E56">0</div><div class="lbl">RSI 과매도</div></div><div class="summary-card"><div class="num" style="color:#854F0B">0</div><div class="lbl">성장주</div></div><div class="summary-card"><div class="num" style="color:#993556">0</div><div class="lbl">거래량 폭발</div></div><div class="summary-card"><div class="num" style="color:#534AB7">0</div><div class="lbl">기관+외국인 쌍끌이</div></div>
+</div>
+<div class="container">
+  
+        <div class="section">
+          <div class="section-header" style="border-left:4px solid #185FA5">
+            <div>
+              <span class="section-title">엔벨로프</span>
+              <span class="badge" style="background:#185FA520;color:#185FA5;border:1px solid #185FA540">0종목</span>
+            </div>
+            <span class="section-desc">20일 SMA ±6% 엔벨로프 신호 + 거래량 1.5배↑</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>종목명</th>
+                <th>신호</th>
+                <th style="text-align:right">현재가</th>
+                <th>상세</th>
+              </tr>
+            </thead>
+            <tbody><tr><td colspan="4" style="text-align:center;color:#888;padding:20px">해당 종목 없음</td></tr></tbody>
+          </table>
+        </div>
+        <div class="section">
+          <div class="section-header" style="border-left:4px solid #0F6E56">
+            <div>
+              <span class="section-title">RSI 과매도</span>
+              <span class="badge" style="background:#0F6E5620;color:#0F6E56;border:1px solid #0F6E5640">0종목</span>
+            </div>
+            <span class="section-desc">일봉 RSI 20 이하 or 주봉 RSI 25 이하</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>종목명</th>
+                <th>신호</th>
+                <th style="text-align:right">현재가</th>
+                <th>상세</th>
+              </tr>
+            </thead>
+            <tbody><tr><td colspan="4" style="text-align:center;color:#888;padding:20px">해당 종목 없음</td></tr></tbody>
+          </table>
+        </div>
+        <div class="section">
+          <div class="section-header" style="border-left:4px solid #854F0B">
+            <div>
+              <span class="section-title">성장주</span>
+              <span class="badge" style="background:#854F0B20;color:#854F0B;border:1px solid #854F0B40">0종목</span>
+            </div>
+            <span class="section-desc">ROE 20% 이상 (EPS/BPS 기반)</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>종목명</th>
+                <th>신호</th>
+                <th style="text-align:right">현재가</th>
+                <th>상세</th>
+              </tr>
+            </thead>
+            <tbody><tr><td colspan="4" style="text-align:center;color:#888;padding:20px">해당 종목 없음</td></tr></tbody>
+          </table>
+        </div>
+        <div class="section">
+          <div class="section-header" style="border-left:4px solid #993556">
+            <div>
+              <span class="section-title">거래량 폭발</span>
+              <span class="badge" style="background:#99355620;color:#993556;border:1px solid #99355640">0종목</span>
+            </div>
+            <span class="section-desc">전일 대비 거래량 10배↑ + 주가 5%↑</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>종목명</th>
+                <th>신호</th>
+                <th style="text-align:right">현재가</th>
+                <th>상세</th>
+              </tr>
+            </thead>
+            <tbody><tr><td colspan="4" style="text-align:center;color:#888;padding:20px">해당 종목 없음</td></tr></tbody>
+          </table>
+        </div>
+        <div class="section">
+          <div class="section-header" style="border-left:4px solid #534AB7">
+            <div>
+              <span class="section-title">기관+외국인 쌍끌이</span>
+              <span class="badge" style="background:#534AB720;color:#534AB7;border:1px solid #534AB740">0종목</span>
+            </div>
+            <span class="section-desc">최근 3일 기관+외국인 동시 순매수</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>종목명</th>
+                <th>신호</th>
+                <th style="text-align:right">현재가</th>
+                <th>상세</th>
+              </tr>
+            </thead>
+            <tbody><tr><td colspan="4" style="text-align:center;color:#888;padding:20px">해당 종목 없음</td></tr></tbody>
+          </table>
+        </div>
+</div>
+<div class="footer">
+  본 정보는 투자 참고용이며, 투자 판단의 책임은 본인에게 있습니다.<br>
+  데이터 출처: 한국거래소(KRX) · 자동 업데이트: 평일 장 마감 후
+</div>
+</body>
+</html>
